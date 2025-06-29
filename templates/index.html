@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI Meeting Summarizer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Rubik', sans-serif;
+      background: radial-gradient(circle at 10% 20%, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+
+    .glass-box {
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(15px);
+      border-radius: 20px;
+      padding: 50px 40px;
+      width: 90%;
+      max-width: 480px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      animation: fadeIn 1s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .tagline {
+      font-size: 14px;
+      opacity: 0.9;
+      margin-bottom: 25px;
+    }
+
+    input[type="file"] {
+      padding: 12px;
+      border: 2px dashed rgba(255, 255, 255, 0.6);
+      border-radius: 12px;
+      background-color: rgba(255, 255, 255, 0.05);
+      color: #fff;
+      width: 100%;
+      font-size: 14px;
+      margin-bottom: 20px;
+      transition: border 0.3s;
+    }
+
+    input[type="file"]:hover {
+      border-color: #fff;
+    }
+
+    button {
+      background: linear-gradient(to right, #43e97b, #38f9d7);
+      color: #000;
+      border: none;
+      font-weight: 600;
+      font-size: 16px;
+      padding: 12px 24px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    .note {
+      margin-top: 20px;
+      font-size: 12px;
+      color: #e2e2e2;
+      opacity: 0.85;
+    }
+  </style>
+</head>
+<body>
+  <div class="glass-box">
+    <h1>🎙️ AI Meeting Summarizer</h1>
+    <p class="tagline">Upload your audio and let AI do the rest: transcribe, summarize, translate & narrate!</p>
+
+    <form action="/" method="post" enctype="multipart/form-data">
+      <input type="file" name="audio_file" accept=".mp3" required>
+      <button type="submit">🚀 Summarize Now</button>
+    </form>
+
+    <div class="note">Only MP3 files are supported. Max size: 500MB.</div>
+  </div>
+</body>
+</html>
