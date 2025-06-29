@@ -88,7 +88,7 @@ def index():
                                    translated=translated,
                                    mp3_path=mp3_path)
         else:
-            return "Only .mp3 files are allowed.", 400wh
+            return "Only .mp3 files are allowed.", 400
 
     return render_template('index.html')
 
